@@ -1,0 +1,48 @@
+#iremos criar um fluxo de trabalho com o seguinte nome
+name: Primeiro Workflow
+
+#aqui iremos incluir os eventos(gatilhos) para a execução da pipeline
+on:
+  #um primeiro eventro, será quando disparar um push
+  push:
+    branches:
+      -main
+      -master
+      -develop
+    #um outro evento, será quando disparar um pull_request
+  pull_request:
+      branches:
+        -main
+        -master
+        -develop
+#agora iremos criar algumas tarefas, e uma lista de passos em cada uma delas
+jobs:
+  job1:
+    name: Primeira tarefa
+    runs-on: ubuntu-latest
+    #vamos incluir alguns passos para o primeiro job
+    steps:
+      - name: Passo 1
+      - run: echo "Executando o primeiro passo da pipeline."
+
+      - name: Passo 2
+      - run: echo "Executando o segundo passo da pipeline."
+
+      - name: Passo 3
+      - run: echo "Executando o terceiro passo da pipeline."
+      
+    
+  job2:
+    name: Segunda tarefa
+    runs-on: ubuntu-latest
+    #vamos incluir mais alguns passos para o segundo job
+    steps:
+      - name: Passo 4
+      - run: echo "Executando o quarto passo da pipeline."
+
+      - name: Passo 5
+      - run: echo "Executando o quinto passo da pipeline."
+
+      - name: Passo 6
+      - run: echo "Executando o sexto passo da pipeline."
+  
