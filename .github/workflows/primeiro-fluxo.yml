@@ -1,7 +1,7 @@
 #iremos criar um fluxo de trabalho com o seguinte nome
 name: Primeiro Workflow
 
-#Aqui iremos incluir os eventos(gatilhos) para a execução da pipeline
+#Aqui iremos incluir os eventos (gatilhos) para a execução da pipeline
 on:
   #um primeiro eventro, será quando disparar um push
   push:
